@@ -271,9 +271,10 @@ ul {
 
 .about {
     background-color: rgb(53, 131, 81);
+    color:White;
     padding: 25px;
     height: 200px;
-    color: white;
+
 }
 
 footer {
