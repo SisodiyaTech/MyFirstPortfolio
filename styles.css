@@ -30,7 +30,7 @@ header {
 nav{
     display: block;
 }
-header nav ul {
+nav > ul > li{
     display: flex;
 }
 
@@ -42,7 +42,7 @@ nav ul {
 
 }
 
-nav ul li {
+header nav ul {
     padding: 15px;
     background-color: rgb(86, 174, 92);
 
@@ -76,6 +76,37 @@ a {
     border-radius: 5px;
     margin: 5px;
 }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+    background-color: rgb(18, 133, 68);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-width: 180px;
+  border-radius: 0 0 10px 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+.dropdown-menu li:hover {
+    background-color: rgb(18, 133, 68);
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+
 
 /* This Is Hero Container */
 
