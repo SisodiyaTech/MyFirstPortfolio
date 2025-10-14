@@ -27,3 +27,21 @@ document.getElementById('Form').addEventListener('submit', function(e){
     })
     .catch(error => alert('Oops! Something went wrong.'));
 });
+
+// _________________________________________________________________________________________________________________________________
+
+const dropdown = document.querySelector('.dropdown');
+    const toggle = document.querySelector('.dropdown-toggle');
+
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      // agar click dropdown ke bahar hua, to band kar do
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('active');
+      }
+    });
+
