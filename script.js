@@ -45,30 +45,3 @@ const dropdown = document.querySelector('.dropdown');
       }
     });
 
-
-// _________________________________________________________________________________________________________________________________
-
-    // Page load animation
-gsap.from("div", {
-  opacity: 0,
-  y: 50,
-  duration: 1,
-  stagger: 0.3 // Sections ek ke baad animate ho
-});
-
-// Scroll-triggered animation
-gsap.utils.toArray(".section").forEach(section => {
-  gsap.fromTo(section, 
-    {opacity: 0, x: -100}, 
-    {
-      opacity: 1,
-      x: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: section,
-        start: "top 80%",  // Jab section viewport ke 80% par ho
-        toggleActions: "play none none none"
-      }
-    }
-  );
-});
